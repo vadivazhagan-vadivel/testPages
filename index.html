@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Open Deep Link</title>
-  </head>
-  <body>
-    <div
-      style="
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      "
-    >
-      <button onclick="openDeepLink()">Open Deep Link</button>
-      <button onclick="openSlack()">Open Slack</button>
-    </div>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Deep Link</title>
+</head>
+<body>
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
+  <button onclick="openDeepLink()">Open Deep Link</button>
+  <button onclick="openWhatsApp()">Open WhatsApp</button>
+  <button onclick="openSlack()">Open Slack</button>
+  <button onclick="openPhonePe()">Open PhonePe</button>
+</div>
 
-    <script>
-      function openDeepLink() {
-        var deepLink =
-          "tez://upi/pay?pa=9344527109@upi&pn=User1&tn=Test UPI&am=20&cu=INR&mc=1234&tr=01234";
-        window.location.href = deepLink;
-      }
+<script>
+function openDeepLink() {
+  var deepLink = 'tez://upi/pay?pa=9000000009@upi&pn=User1&tn=Test UPI&am=20&cu=INR&mc=1234&tr=01234';
+  window.location.href = deepLink;
+}
 
-      function openSlack() {
-        var slackLink = "slack://";
-        window.location.href = slackLink;
-      }
-    </script>
-  </body>
+function openWhatsApp() {
+  var phoneNumber = '9000000009';
+  var whatsappLink = 'https://api.whatsapp.com/send?phone=' + phoneNumber;
+  window.open(whatsappLink);
+}
+
+function openSlack() {
+  var slackLink = 'slack://';
+  window.location.href = slackLink;
+}
+
+function openPhonePe() {
+  var phonePeLink = 'phonepe://pay?pa=9000000009@upi&pn=User1&tn=Test UPI&am=20&cu=INR&mc=1234&tr=01234';
+  window.location.href = phonePeLink;
+}
+</script>
+</body>
 </html>
