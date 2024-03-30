@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Open Deep Link</title>
-</head>
-<body>
-<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-  <button onclick="openDeepLink()">Open Deep Link</button>
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Deep Link</title>
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      "
+    >
+      <button onclick="openDeepLink()">Open Deep Link</button>
+      <button onclick="openSlack()">Open Slack</button>
+    </div>
 
-<script>
-function openDeepLink() {
-  var deepLink = 'tez://upi/pay?pa=9334527109@upi&pn=User1&tn=Test UPI&am=20&cu=INR&mc=1234&tr=01234';
-  window.location.href = deepLink;
-}
-</script>
-</body>
+    <script>
+      function openDeepLink() {
+        var deepLink =
+          "tez://upi/pay?pa=9344527109@upi&pn=User1&tn=Test UPI&am=20&cu=INR&mc=1234&tr=01234";
+        window.location.href = deepLink;
+      }
+
+      function openSlack() {
+        var slackLink = "slack://";
+        window.location.href = slackLink;
+      }
+    </script>
+  </body>
 </html>
